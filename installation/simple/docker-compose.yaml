@@ -1,0 +1,14 @@
+version: "3.9"
+name: "airflow_simple"
+
+services:
+  web:
+    container_name: airflow_webserver
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+     - ./dags:/dags
+     - ./logs:/logs
+     - ./plugins:/plugins
+    command: "airflow scheduler & airflow webserver"

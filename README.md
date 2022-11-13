@@ -29,6 +29,7 @@ Airflow needs a database. The default database is an Sqlite and for simplicity w
 airflow db init
 ```
 Afther the database is initialized, we can create a user with admin permission for login to airflow webserver:
+
 ```bash
 airflow users create --username admin\
                      --password admin\
@@ -42,14 +43,17 @@ airflow users create --username admin\
 
 
 ### Installation on Windows
+
 In Windows OS, installation of Airflow is tricky. The simplest solution to install Airflow on a Windows OS is to use Docker.
 
 In order to use this method, you have to install Docker and docker-compose in your machine. [Here](https://docs.docker.com/desktop/install/windows-install/) is the information to know how to install Docker on you Windows machine.
 
 In your local computer, create a directoy and name it `airflow`.  For example, you can use git-bash as follows:
+
 ```bash
 mkdir ~/airflow
 ```
+
 Navigate insdie the local `airflow` directoy and copy all of the files inside `https://github.com/javadebadi/airflow-course/installation/simple/` to your local `airflow` directory.
 
 Next, make sure docker engine is up and running your machine, then open a powershell windows inside `airflow` directory and execute the following command:
@@ -58,4 +62,4 @@ Next, make sure docker engine is up and running your machine, then open a powers
 docker-compose up
 ```
 
-To test that you have installed it successfully, open this link in browser: http://localhost:8080
+To test that you have installed it successfully, open this link in browser: [http://localhost:8080](http://localhost:8080)

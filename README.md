@@ -2,14 +2,39 @@
     Workflow Management using Airflow in Python  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" width="100">
 </h1>
 
-## Installation
+<p>Table of Contents</p>
+<ul>
+        <li>
+            <h2>
+                <a href="#installation">Installation</a>
+            </h2>
+            <ul>
+                <li>
+                    <h3>
+                        <a href="#installation-linux">
+                            Installation on Linux
+                        </a>
+                    </h3>
+                </li>
+                <li>
+                    <h3>
+                        <a href="#installation-windows">
+                            Installation on Windows
+                        </a>
+                    </h3>
+                </li>
+            </ul>
+        </li>
+</ul>
+
+## Installation <a id="installation"></a>
 Airflow is written in Python and therefore you need to install Python in your OS or docker container. Since the goal of this tutorial is to teach how to use airflow, we will start with simplest setup and continue to add further tools later.
 
-### Installation on Linux
+### Installation on Linux <a id="installation-linux"></a>
 If Python is not installed on your Linux OS, install it. We will use Python 3.10 and recommend that you use the same version too.
 First create a virtual environment:
 ```bash
-python3 -m venv. venv
+python3 -m venv .venv
 ```
 Next, activate the virtual environment
 ```bash
@@ -42,7 +67,7 @@ airflow users create --username admin\
 
 
 
-### Installation on Windows
+### Installation on Windows <a id="installation-windows"></a>
 
 In Windows OS, installation of Airflow is tricky. The simplest solution to install Airflow on a Windows OS is to use Docker.
 

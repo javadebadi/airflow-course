@@ -1,7 +1,6 @@
 <h1 style="align-items: center; text-align: center">
     Workflow Management using Airflow in Python  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png" width="100">
 </h1>
-# Workflow Management with Airflow in Python
 
 ## Installation
 Airflow is written in Python and therefore you need to install Python in your OS or docker container. Since the goal of this tutorial is to teach how to use airflow, we will start with simplest setup and continue to add further tools later.
@@ -24,11 +23,12 @@ After installion is finished you must have a directory in this address: `~/arifl
 - `dags`
 - `plugins`
 - `logs`
+
 Airflow needs a database. The default database is an Sqlite and for simplicity we will go with default for now. To initialize the database, we run the following command:
 ```bash
 airflow db init
 ```
-Afther the database is initialized, we can create a user with admin permission for login to airflow webserver:
+After the database is initialized, we can create a user with admin permission for login to airflow webserver:
 
 ```bash
 airflow users create --username admin\

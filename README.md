@@ -17,7 +17,7 @@ Next, activate the virtual environment
 source .venv/bin/activate
 ```
 Then, run the following command to install Apache Airflow:
-```
+```bash
 python3 -m pip install apache-airflow
 ```
 After installion is finished you must have a directory in this address: `~/ariflow` with following subdirectories:
@@ -25,11 +25,11 @@ After installion is finished you must have a directory in this address: `~/arifl
 - `plugins`
 - `logs`
 Airflow needs a database. The default database is an Sqlite and for simplicity we will go with default for now. To initialize the database, we run the following command:
-```
+```bash
 airflow db init
 ```
 Afther the database is initialized, we can create a user with admin permission for login to airflow webserver:
-```
+```bash
 airflow users create --username admin\
                      --password admin\
                      --firstname Javad\
@@ -47,14 +47,14 @@ In Windows OS, installation of Airflow is tricky. The simplest solution to insta
 In order to use this method, you have to install Docker and docker-compose in your machine. [Here](https://docs.docker.com/desktop/install/windows-install/) is the information to know how to install Docker on you Windows machine.
 
 In your local computer, create a directoy and name it `airflow`.  For example, you can use git-bash as follows:
-```
+```bash
 mkdir ~/airflow
 ```
 Navigate insdie the local `airflow` directoy and copy all of the files inside `https://github.com/javadebadi/airflow-course/installation/simple/` to your local `airflow` directory.
 
 Next, make sure docker engine is up and running your machine, then open a powershell windows inside `airflow` directory and execute the following command:
 
-```
+```bash
 docker-compose up
 ```
 

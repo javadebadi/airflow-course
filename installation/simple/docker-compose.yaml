@@ -8,7 +8,9 @@ services:
     ports:
       - "8080:8080"
     volumes:
-     - ./dags:/dags
-     - ./logs:/logs
-     - ./plugins:/plugins
-    command: "airflow scheduler & airflow webserver"
+     - ../../airflow/dags:/root/airflow/dags
+     - ../../airflow/logs:/root/airflow/logs
+     - ../../airflow/plugins:/root/airflow/plugins
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+    command: bash -c "airflow webserver & airflow scheduler"
